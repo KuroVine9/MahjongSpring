@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/Mahjong_Record_V2
+    username: root
+    password: 404notfound

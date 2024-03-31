@@ -1,7 +1,6 @@
-package com.kuro9.discord
+package com.kuro9.mahjongspring.discord
 
 import lombok.extern.slf4j.Slf4j
-import net.dv8tion.jda.api.EmbedBuilder
 import net.dv8tion.jda.api.JDA
 import net.dv8tion.jda.api.JDABuilder
 import net.dv8tion.jda.api.OnlineStatus
@@ -10,11 +9,9 @@ import net.dv8tion.jda.api.events.interaction.component.ButtonInteractionEvent
 import net.dv8tion.jda.api.events.session.ReadyEvent
 import net.dv8tion.jda.api.events.session.ShutdownEvent
 import net.dv8tion.jda.api.hooks.ListenerAdapter
-import net.dv8tion.jda.api.interactions.components.buttons.Button
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
-import java.lang.String
 
 
 @Slf4j
@@ -22,6 +19,7 @@ import java.lang.String
 class DiscordListener : ListenerAdapter() {
     private val log: Logger = LoggerFactory.getLogger(this::class.java)
     private val jda: JDA = JDABuilder.createDefault("").build()
+
     init {
         log.info("DiscordListener init")
 
@@ -32,7 +30,7 @@ class DiscordListener : ListenerAdapter() {
     }
 
     override fun onSlashCommandInteraction(event: SlashCommandInteractionEvent) {
-        when (event.getFullCommandName()) {
+        when (event.fullCommandName) {
             "ping" -> {}
 
             "revalid" -> {}
