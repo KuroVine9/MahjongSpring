@@ -52,7 +52,6 @@ dependencies {
     implementation("org.springframework.modulith:spring-modulith-starter-core")
     implementation("org.springframework.modulith:spring-modulith-starter-jdbc")
 //    implementation("org.springframework.session:spring-session-jdbc")
-    implementation(project(mapOf("path" to ":discord-operation")))
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
 //    developmentOnly("org.springframework.boot:spring-boot-docker-compose")
@@ -69,7 +68,14 @@ dependencies {
     testImplementation("org.springframework.security:spring-security-test")
     implementation(kotlin("script-runtime"))
 
+    implementation("org.slf4j:slf4j-api:2.0.6")
+    testImplementation("ch.qos.logback:logback-classic:1.4.5")
 
+    // sub modules
+
+    implementation(project(mapOf("path" to ":discord-operation")))
+    implementation(project(mapOf("path" to ":oauth-api")))
+    implementation(project(mapOf("path" to ":kotlin-common")))
 }
 
 dependencyManagement {
