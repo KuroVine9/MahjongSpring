@@ -1,6 +1,7 @@
 package com.kuro9.mahjongspring.discord
 
 import com.kuro9.mahjongspring.discord.enumurate.SlashCommand
+import com.kuro9.utils.infoLog
 import jakarta.annotation.PostConstruct
 import lombok.extern.slf4j.Slf4j
 import net.dv8tion.jda.api.JDA
@@ -24,7 +25,7 @@ class DiscordListener : ListenerAdapter() {
 
     @PostConstruct
     fun init() {
-        log.info("DiscordListener init")
+        infoLog("${this::class.qualifiedName} init")
 
         with(jda) {
             presence.setStatus(OnlineStatus.DO_NOT_DISTURB)
