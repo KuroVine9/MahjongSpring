@@ -72,10 +72,6 @@ dependencies {
     testImplementation("ch.qos.logback:logback-classic:1.4.5")
 
     // sub modules
-
-    implementation(project(mapOf("path" to ":discord-operation")))
-    implementation(project(mapOf("path" to ":oauth-api")))
-    implementation(project(mapOf("path" to ":kotlin-common")))
 }
 
 dependencyManagement {

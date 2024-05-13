@@ -3,6 +3,10 @@ plugins {
 }
 rootProject.name = "MahjongSpring"
 
-include("discord-operation")
-include("oauth-api")
-include("kotlin-common")
+include("business")
+include("controller")
+
+include("business:kotlin-common")
+include("business:oauth-api")
+
+include("controller:discord-operation")
