@@ -1,5 +1,6 @@
 package com.kuro9.mahjongspring.discord
 
+import jakarta.annotation.PostConstruct
 import lombok.extern.slf4j.Slf4j
 import net.dv8tion.jda.api.JDA
 import net.dv8tion.jda.api.JDABuilder
@@ -20,7 +21,8 @@ class DiscordListener : ListenerAdapter() {
     private val log: Logger = LoggerFactory.getLogger(this::class.java)
     private val jda: JDA = JDABuilder.createDefault("").build()
 
-    init {
+    @PostConstruct
+    fun init() {
         log.info("DiscordListener init")
 
         with(jda) {
