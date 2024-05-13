@@ -1,5 +1,6 @@
 package com.kuro9.mahjongspring.discord
 
+import com.kuro9.mahjongspring.discord.enumurate.SlashCommand
 import jakarta.annotation.PostConstruct
 import lombok.extern.slf4j.Slf4j
 import net.dv8tion.jda.api.JDA
@@ -32,31 +33,27 @@ class DiscordListener : ListenerAdapter() {
     }
 
     override fun onSlashCommandInteraction(event: SlashCommandInteractionEvent) {
-        when (event.fullCommandName) {
-            "ping" -> {}
+        when (SlashCommand.toSlashCommand(event.fullCommandName)) {
+            SlashCommand.PING -> TODO()
+            SlashCommand.REVALID -> TODO()
+            SlashCommand.FILE -> TODO()
+            SlashCommand.MACHI -> TODO()
+            SlashCommand.STAT_SEASON -> TODO()
+            SlashCommand.STAT_MONTH -> TODO()
+            SlashCommand.STAT_ENTIRE -> TODO()
+            SlashCommand.RANK_SEASON -> TODO()
+            SlashCommand.RANK_MONTH -> TODO()
+            SlashCommand.RANK_ENTIRE -> TODO()
+            SlashCommand.ADMIN_ADD -> TODO()
+            SlashCommand.ADMIN_GET -> TODO()
+            SlashCommand.ADMIN_DELETE -> TODO()
+            SlashCommand.GAME_GROUP_ADD -> TODO()
+            SlashCommand.GAME_GROUP_GET -> TODO()
+            SlashCommand.ADD -> TODO()
+            SlashCommand.DELETE -> TODO()
+            SlashCommand.MODIFY -> TODO()
 
-            "revalid" -> {}
-            "file" -> {}
-
-            "add" -> {}
-            "stat season" -> {}
-            "stat month" -> {}
-            "stat entire" -> {}
-            "rank entire" -> {}
-
-            "rank month" -> {}
-
-            "rank season" -> {}
-
-            "machi" -> {}
-            "admin add" -> {}
-            "admin get" -> {}
-            "admin delete" -> {}
-            "game_group add" -> {}
-            "game_group get" -> {}
-            "delete" -> {}
-            "modify" -> {}
-            else -> {}
+            SlashCommand.NOT_IMPLEMENT -> TODO()
         }
     }
 
