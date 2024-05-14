@@ -1,0 +1,7 @@
+app:
+  discord:
+    webhook:
+      channel:
+        error: https://todochannel.co.kr
+        debug: https://todochannel.co.kr
+        normal: https://todochannel.co.kr
