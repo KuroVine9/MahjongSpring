@@ -13,3 +13,5 @@ include("business:webhook")
 include("business:webhook:discord-impl")
 
 include("controller:discord-operation")
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")

@@ -1,3 +1,3 @@
 dependencies {
-    implementation(project(":business:kotlin-common"))
+    implementation(projects.business.kotlinCommon)
 }
